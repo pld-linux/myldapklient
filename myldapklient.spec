@@ -32,11 +32,11 @@ kde_icondir="%{_pixmapsdir}"; export kde_icondir
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/Mail
+install -d $RPM_BUILD_ROOT%{_desktopdir}/Network/Mail
 
 %{__make} install DESTDIR="$RPM_BUILD_ROOT"
 
-install %{name}/%{name}.desktop $RPM_BUILD_ROOT%{_applnkdir}/Network/Mail
+install %{name}/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}/Network/Mail
 
 %find_lang %{name}
 
@@ -50,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Network/*
+%{_desktopdir}/Network/*
 %{_pixmapsdir}/*/*/*/*.png
