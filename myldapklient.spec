@@ -1,12 +1,12 @@
 Summary:	Support for LDAP address book for KMail
 Summary(pl):	Wsparcie dla u¿ywania ksi±¿ki adresowej LDAP w KMailu
 Name:		myldapklient
-Version:	0.6.2
+Version:	0.6.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	304a1ace45d0a5ab6d41fc0354f407c5
+# Source0-md5:	47ef81e43e5f8746c17c5d96c11e08aa
 BuildRequires:	kdebase-devel
 Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
