@@ -5,13 +5,12 @@ Version:	0.6.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/myldapklient/%{name}-%{version}.tar.gz
 # Source0-md5:	47ef81e43e5f8746c17c5d96c11e08aa
 BuildRequires:	kdebase-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_htmldir	/usr/share/doc/kde/HTML
 
 %description
 Support for LDAP address book for KMail.
@@ -23,8 +22,7 @@ Wsparcie dla u¿ywania ksi±¿ki adresowej LDAP w KMailu.
 %setup -q
 
 %build
-kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
+kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 
 %configure2_13
 
@@ -32,11 +30,12 @@ kde_icondir="%{_pixmapsdir}"; export kde_icondir
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}/Network/Mail
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
-%{__make} install DESTDIR="$RPM_BUILD_ROOT"
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install %{name}/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}/Network/Mail
+install %{name}/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name}
 
@@ -50,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/Network/*
-%{_pixmapsdir}/*/*/*/*.png
+%{_desktopdir}/*.desktop
+%{_iconsdir}/*/*/*/*.png
