@@ -5,7 +5,7 @@ Version:	0.6.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	304a1ace45d0a5ab6d41fc0354f407c5
 BuildRequires:	kdebase-devel
 Requires:	kdelibs
