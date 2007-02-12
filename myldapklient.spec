@@ -1,5 +1,5 @@
 Summary:	Support for LDAP address book for KMail
-Summary(pl):	Wsparcie dla u¿ywania ksi±¿ki adresowej LDAP w KMailu
+Summary(pl.UTF-8):   Wsparcie dla uÅ¼ywania ksiÄ…Å¼ki adresowej LDAP w KMailu
 Name:		myldapklient
 Version:	0.6.6
 Release:	1
@@ -15,8 +15,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Support for LDAP address book for KMail.
 
-%description -l pl
-Wsparcie dla u¿ywania ksi±¿ki adresowej LDAP w KMailu.
+%description -l pl.UTF-8
+Wsparcie dla uÅ¼ywania ksiÄ…Å¼ki adresowej LDAP w KMailu.
 
 %prep
 %setup -q
